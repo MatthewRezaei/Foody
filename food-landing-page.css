@@ -1,0 +1,292 @@
+/* variables*/
+
+:root {
+    --text-color-dark: rgb(10, 10, 10);
+    --primary-color: rgb(253, 218, 129);
+    --secondary-color: rgb(250, 133, 00);
+    --white-color:rgb(255, 255, 255);
+    --text-color-muted:rgb(153, 153, 153);
+}
+
+/* general tags */
+
+* {
+    box-sizing:border-box;
+    margin: 0;
+}
+
+body {
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    color: var(--text-color-dark);
+    padding:  20px 120px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+button {
+    border-radius: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+/* nav section */
+
+.nav-button {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav-icons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.sign-in-btn {
+    border: 1px solid var(--text-color-dark);
+}
+
+.sign-up-btn {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.first-logo-o {
+    color: var(--primary-color);
+}
+
+.second-logo-o {
+    color: var(--secondary-color);
+}
+
+.basket-icon-container {
+    position: relative;
+}
+
+.basket-count {
+    position: absolute;
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 12px;
+    left: 8px;
+}
+
+/* Main section */
+
+.title-thin {
+    font-weight:200;
+}
+
+.main-section {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description {
+    color: var(--text-color-muted);
+}
+
+.bold-best {
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+.order-section {
+    margin-top: 30px;
+}
+
+.total-order {
+    font-size: 1.9rem;
+    font-weight: 100;
+}
+
+.bold-prise {
+    font-weight: bold;
+}
+
+.action-btn-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.qty-btn {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    color: var(--secondary-color);
+}
+
+.qty-btn-container {
+    border: 1px solid var(--secondary-color);
+    border-radius: 40px;
+}
+
+.buy-btn {
+    position: relative;
+    background-color: var(--text-color-dark);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    width: auto;
+}
+
+.buy-btn-icon {
+    position: absolute;
+    left: 5px;
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--text-color-dark);
+}
+
+.buy-text {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+/* Image section */
+
+
+.marble-img {
+    height: 105vh;
+    width: 105vh;
+    border-radius: 50%;
+    position: fixed;  
+    top: -2.5%;
+    left: 70%;
+    z-index: -1;
+    filter: brightness(1.3);
+}
+
+.pokebowl-img {
+    position: fixed ;
+    height: 330px;
+    top: 130px;
+    right: 230px;
+}
+
+/* product banner */
+
+.product-banner {
+    background-color: var(--secondary-color);
+    width: 180px;
+    height: 270px;
+    border-radius: 25px;
+    position: fixed;
+    top: 280px;
+    right: 302px;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    z-index: -1;
+}
+
+.product-info {
+    font-size: larger;
+    gap: 40px;
+    display: flex;
+}
+
+
+.delivery-time {
+    background-color:var(--text-color-dark);
+    border-radius: 30px;
+    padding: 8px  10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* Animations */
+
+.sign-up-btn,
+.sign-in-btn,
+.basket-icon-container,
+.fa-magnifying-glass,
+.buy-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-up-btn:hover,
+.sign-in-btn:hover,
+.buy-btn:hover {
+    transform: scale(1.1);
+}
+
+.basket-icon-container:hover,
+.fa-magnifying-glass:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive Design*/
+
+@media screen and (max-width:1480px) {
+    nav {
+        flex-direction: column;
+        gap: 40px;
+    }
+    h2 {
+        text-align: center;
+    }
+    body {
+        padding: 20px;
+    }
+    .image-section {
+        display: none;
+    }
+    .main-section {
+        align-items: center;
+    }
+    .description {
+        text-align: center;
+    }
+}
