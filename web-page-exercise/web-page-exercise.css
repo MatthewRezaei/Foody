@@ -1,0 +1,50 @@
+@media (min-width:1024px) {
+    .container {
+        width: 75%;
+    }
+    .card {
+        max-width: 45%;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        max-width: 30%;
+    }
+}
+
+@media (min-width:680px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        max-width: 40%;
+    }
+}
+
+@media (max-width:679px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        max-width: 90%;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica;
+    background: radial-gradient(circle, #EEAECA 0%, #94BBE9 100%);
+}
+
+.container {
+    justify-content: center; 
+    max-width: none; 
+    place-self: center;
+}
+
+.card {
+    width: 18rem;
+}
